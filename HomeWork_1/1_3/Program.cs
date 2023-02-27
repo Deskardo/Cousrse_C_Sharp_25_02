@@ -2,10 +2,17 @@
 // а на выходе показывает все чётные числа от 1 до N.
 
 int a = int.Parse(Console.ReadLine()!);
-int N = -a;
+int N = 2;
 
 while (N <= a)
 {
-  Console.Write(N + ", ");
-  N++;
+  if (N % 2 == 0)
+  { 
+    Console.Write(N + ", "); 
+    N++;
+  }
+  else
+  {
+    N++;
+  }
 }
