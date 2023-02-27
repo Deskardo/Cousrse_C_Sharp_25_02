@@ -11,7 +11,7 @@ while (a < 1 || a > 7)
 }
 if (a == 6 || a == 7)
 {
-  Console.WriteLine("Ура, это выходной");
+  Console.WriteLine("ДА, это выходной");
 }
 else
 {
