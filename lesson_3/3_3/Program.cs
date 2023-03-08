@@ -1,6 +1,6 @@
 ﻿// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N.
 
-void Kval(int num)
+void Kvad(int num)
 {
   for(int i = 1; i <= num; i++)
   {
@@ -9,4 +9,4 @@ void Kval(int num)
 }
 
 int x = int.Parse(Console.ReadLine()!);
-Kval(x);
+Kvad(x);
