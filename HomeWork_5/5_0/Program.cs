@@ -52,6 +52,6 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[] mass = MassNums(num, start, stop);
 Print(mass);
-int[] mass2 = CompMass(mass);
-Print(mass2);
+int[] mass2 = CompMass(mass); // в качестве аргумента первый массив
+Print(mass2);                 // в качестве аргумента массив из тертьего метода
 
