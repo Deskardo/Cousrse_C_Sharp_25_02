@@ -13,4 +13,5 @@ string Convert(int num)
 
 Console.WriteLine("Введите число для конвертации:");
 int a = int.Parse(Console.ReadLine()!);
-Console.WriteLine(Convert(a));
+string res = Convert(a);
+Console.WriteLine(res);
