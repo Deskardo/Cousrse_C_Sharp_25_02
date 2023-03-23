@@ -1,6 +1,6 @@
-﻿// Задайте двумерный массив. Напишите программу, 
-// которая заменяет строки на столбцы. В случае, если это невозможно,
-// программа должна вывести сообщение для пользователя.
+﻿// Задайте двумерный массив из целых чисел.
+// Напишите программу, которая удалит строку и столбец, на
+// пересечении которых расположен наименьший элемент массива.
 
 void Print(int[,] arr)
 {
@@ -27,19 +27,18 @@ int[,] MassNums(int row, int column, int from, int to)
   return arr;
 }
 
-void ReplaceColumnRows(int[,] arr)
+int[] FrequencyDictionary(int[,] arr)
 {
-  int row = arr.GetLength(0);
-  int column = arr.GetLength(1);
+  int[] arr2 = new int[10];
+  foreach (int a in arr) arr2[a]++;
+  return arr2;
+}
 
-  if (row != column)
-  {
-    Console.WriteLine("Замена невозможна");
-    return;
-  }
-  for (int i = 0; i < row; i++)
-    for (int j = 0; j < i; j++)
-      (arr[i, j], arr[j, i]) = (arr[j, i], arr[i, j]);
+void Print2(int[] arr)
+{
+  for (int i = 0; i < arr.Length; i++)
+    Console.Write($" {i} - {arr[i]} ");
+  Console.WriteLine();
 }
 
 
@@ -55,5 +54,4 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[,] mass = MassNums(num_row, num_column, start, stop);
 Print(mass);
-ReplaceColumnRows(mass);
-Print(mass);
+Print2(FrequencyDictionary(mass));

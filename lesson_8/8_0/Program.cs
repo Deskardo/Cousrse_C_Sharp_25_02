@@ -1,6 +1,5 @@
 ﻿// Задайте двумерный массив. Напишите программу, 
-// которая заменяет строки на столбцы. В случае, если это невозможно,
-// программа должна вывести сообщение для пользователя.
+// которая поменяет местами первую и последнюю строку массива.
 
 void Print(int[,] arr)
 {
@@ -27,19 +26,13 @@ int[,] MassNums(int row, int column, int from, int to)
   return arr;
 }
 
-void ReplaceColumnRows(int[,] arr)
+void FirstWithLast(int [,] arr)
 {
   int row = arr.GetLength(0);
   int column = arr.GetLength(1);
 
-  if (row != column)
-  {
-    Console.WriteLine("Замена невозможна");
-    return;
-  }
-  for (int i = 0; i < row; i++)
-    for (int j = 0; j < i; j++)
-      (arr[i, j], arr[j, i]) = (arr[j, i], arr[i, j]);
+  for(int j = 0; j < column; j++)
+    (arr[0, j], arr[row -1, j]) = (arr[row -1, j], arr[0, j]);
 }
 
 
@@ -55,5 +48,5 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[,] mass = MassNums(num_row, num_column, start, stop);
 Print(mass);
-ReplaceColumnRows(mass);
+FirstWithLast(mass);
 Print(mass);

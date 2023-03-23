@@ -37,7 +37,7 @@ int[] FrequencyDictionary(int[,] arr)
 void Print2(int[] arr)
 {
   for (int i = 0; i < arr.Length; i++)
-    Console.Write($" {i} - {arr[i]} ");
+    Console.WriteLine($" {i} - {arr[i]} ");
   Console.WriteLine();
 }
 
