@@ -45,8 +45,11 @@ void MinimalSumRow(int[,] baseArr)
     }
     else
     {
-      sum = min;
-      rowNum = i;
+      if (min > sum)
+      {
+        min = sum;
+        rowNum = i;
+      }
     }
   }
   Console.WriteLine($"Минимальная сумма элементов находится в строке {rowNum + 1} и равна {min}");

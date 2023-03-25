@@ -68,6 +68,7 @@ Console.WriteLine("Введите количество колонок перво
 int num_column = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите количество строк второй матрицы");
 int num_row2 = int.Parse(Console.ReadLine()!);
+
 while (num_column != num_row2)
 {
   Console.WriteLine("число столбцов первой матрицы, должно совпадать с числом строк во второй матрице");
@@ -78,6 +79,7 @@ while (num_column != num_row2)
   num_row2 = int.Parse(Console.ReadLine()!);
 }
 Console.WriteLine("Введите количество колонок второй матрицы");
+
 int num_column2 = int.Parse(Console.ReadLine()!);
 
 
