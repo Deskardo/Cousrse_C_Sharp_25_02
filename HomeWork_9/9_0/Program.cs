@@ -7,6 +7,7 @@ void EvenSum(int M, int N)
 {
   if (M > N) return;
   while (M < 2) M++;
+  if (N % 2 == 1) N--;
   EvenSum(M, N - 2);
   Console.Write($"{N} ");
 }
