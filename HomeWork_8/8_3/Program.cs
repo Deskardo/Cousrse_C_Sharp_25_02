@@ -46,7 +46,7 @@ int[,] MatrixComposition(int[,] arr, int[,] arr2)
   {
     for (int j = 0; j < arr2.GetLength(1); j++)
     {
-      for (int k = 0; k < arr2.GetLength(0); k++)
+      for (int k = 0; k < arr.GetLength(1); k++)
       {
         compositionArr[i, j] += arr[i, k] * arr2[k, j];
       }
